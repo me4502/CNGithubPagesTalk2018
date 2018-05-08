@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-BRANCH=gh-pages
+BRANCH=master
 TARGET_REPO=Me4502/CNGithubPagesTalk2018.git
 PELICAN_OUTPUT_FOLDER=output
 
@@ -20,6 +20,6 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     #add, commit and push files
     git add -f .
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to Github Pages"
-    git push -fq origin ${BRANCH} > /dev/null
+    git push -fq origin gh-pages > /dev/null
     echo -e "Deploy completed\n"
 fi
