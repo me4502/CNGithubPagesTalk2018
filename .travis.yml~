@@ -10,8 +10,8 @@ script:
 - make html
 notifications:
   email:
-    on_success: always
-    on_failure: always
+    on_success: never
+    on_failure: never
 before_install:
   - git submodule update --init --recursive
 after_success: bash deploy.sh
