@@ -20,6 +20,6 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     #add, commit and push files
     git add --all
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to Github Pages"
-    git push -fq origin gh-pages > /dev/null
+    git push -f origin gh-pages
     echo -e "Deploy completed\n"
 fi
